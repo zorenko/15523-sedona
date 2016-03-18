@@ -1,3 +1,30 @@
 .main-header {
-  border: 1px solid red;
+  position: relative;
+  min-height: 56px;
+  background-color: #fff;
+  .container;
+  .clearfix;
+}
+.main-header__logo {
+  position: absolute;
+  left: 50%;
+  bottom: -27px;
+  margin-left: -51px;
+}
+
+@media @mobile-width {
+  .main-header {
+    position: relative;
+    min-height: 280px;
+  }
+}
+
+@media @tablet-width {
+}
+
+@media @desktop-width {
+  .main-header__logo {
+    margin-left: -55px;
+    bottom: -40px;
+  }
 }

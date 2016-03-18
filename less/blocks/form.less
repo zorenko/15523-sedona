@@ -1,3 +1,191 @@
-.form {
-  border: 1px solid red;
+.form,
+.form form {
+  .container;
+  .clearfix;
+  background: #fff;
+}
+.form__fieldset {
+  border: none;
+  font-weight: 600;
+  .clearfix;
+}
+label,
+input {
+  display: table;
+  font-size: 18px;
+}
+.form__fieldset--name label,
+.form__fieldset--name input,
+.form__fieldset--contacts label,
+.form__fieldset--contacts input  {
+  display: block;
+}
+.form__fieldset--name label,
+.form__fieldset--contacts label {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.form__fieldset--name input,
+.form__fieldset--contacts input {
+  display: inline-block;
+  padding: 15px 20px;
+  border: none;
+}
+.form__fieldset--contacts input {
+  width: 100%;
+}
+.form__fieldset--name input[placeholder],
+.form__fieldset--contacts input[placeholder] {
+  background: #f2f2f2;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  vertical-align: middle;
+}
+input,
+.form__fieldset--impression label,
+.form__fieldset--attractions label {
+  text-transform: none;
+}
+.form__fieldset--impression label,
+.form__fieldset--attractions label {
+  margin-bottom: 30px;
+  margin-left: 70px;
+}
+.form__fieldset input[type=checkbox],
+.form__fieldset input[type=radio] {
+  display: none;
+}
+textarea {
+  border: none;
+  width: 100%;
+  padding: 20px;
+  background: #f2f2f2;
+  height: 160px;
+  color: #000;
+  font-size: 18px;
+}
+textarea[placeholder] {
+  color: #000;
+  font-size: 18px;
+}
+.form__error {
+  color: #ff5c5c;
+  font-size: 14px;
+  display: inline-block;
+  text-transform: none;
+  text-align: left;
+  font-weight: normal;
+}
+
+@media @mobile-width {
+  .form__fieldset {
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;
+  }
+  .form__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .form__btn {
+    margin: 0 20px;
+  }
+}
+
+@media @tablet-width {
+  .form form  {
+    position: relative;
+    min-height: 1300px;
+  }
+  .form__fieldset {
+    position: absolute;
+    min-height: 200px;
+    width: 648px;
+    top: 0;
+    left: 50px;
+  }
+  .form__fieldset--name,
+  .form__fieldset--impression {
+    width: 50%;
+  }
+  .form__fieldset--name {
+    left: 50%;
+  }
+  .form__fieldset--contacts {
+    top: 300px;
+  }
+  .form__fieldset--attractions {
+    top: 600px;
+  }
+  .form__fieldset--feedback {
+    top: 900px;
+  }
+  .form__title {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 160px;
+    position: relative;
+    z-index: 0;
+  }
+  .form__title::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+  }
+  .form__title::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    width: 400px;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    z-index: -1;
+  }
+  .form__fieldset--name .form__title,
+  .form__fieldset--impression .form__title {
+    padding: 0;
+    text-align: left;
+  }
+  .form__fieldset--name .form__title::after,
+  .form__fieldset--impression .form__title::after,
+  .form__fieldset--name .form__title::before,
+  .form__fieldset--impression .form__title::before {
+    display: none;
+  }
+  .form__fieldset--attractions label {
+    display: inline-block;
+    width: 240px;
+  }
+  .form__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -140px;
+  }
+}
+
+@media @desktop-width {
+  .form__fieldset {
+    width: 960px;
+    left: 120px;
+  }
+  .form__fieldset--name,
+  .form__fieldset--impression {
+    width: 480px;
+  }
+  .form__fieldset--name {
+    left: 50%;
+  }
+  .form__fieldset--attractions label {
+    width: 140px;
+  }
 }

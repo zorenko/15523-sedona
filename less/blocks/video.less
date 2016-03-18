@@ -1,3 +1,29 @@
 .video {
-  border: 1px solid red;
+  .container;
+  .clearfix;
+  background: #fff;
+  text-align: center;
+}
+
+@media @mobile-width {
+  .video {
+    padding: 0;
+  }
+  .video__text {
+    padding: 20px;
+  }
+}
+
+@media @tablet-width {
+  .video {
+    padding: 60px;
+  }
+  .video__title {
+    font-size: 30px;
+  }
+}
+@media @desktop-width {
+  .video {
+    padding: 65px 200px 90px;
+  }
 }
