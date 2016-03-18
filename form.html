@@ -19,11 +19,11 @@
   </header>
 
   <section class="subheader">
-    <div class="subheader__cover">
+    <div class="subheader__cover subheader__cover--small">
       <img src="http://placehold.it/320x160" class="subheader__pic subheader__pic--small">
     </div>
-    <div class="subheader__text">
-      <h1 class="subheader__title">Оставьте свой отзыв</h1>
+    <div class="subheader__text subheader__text--small">
+      <h1 class="subheader__title subheader__title--small">Оставьте свой отзыв</h1>
       <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </div>
   </section>
@@ -31,7 +31,7 @@
   <section class="form">
     <form action="/echo" method="post">
       <fieldset class="form__fieldset form__fieldset--name">
-        <legend>Представьтесь, пожалуйста:</legend>
+        <h2 class="form__title">Представьтесь, пожалуйста:</h2>
         <label>
           Имя:<input class="text" type="text" name="name" value="" placeholder="Петр">
         </label>
@@ -44,17 +44,18 @@
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--contacts">
-        <legend>Контактная информация:</legend>
+        <h2 class="form__title">Контактная информация:</h2>
         <label>
           Контактный телефон: <input class="tel" type="tel" name="tel" value="" placeholder="Введите телефон">
         </label>
+        <span class="form__error">Ошибка, перепроверьте номер</span>
         <label>
           Электронная почта: <input class="e-mail" type="email" name="e-mail" value="" placeholder="Введите e-mail">
         </label>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--impression">
-        <legend>Ваше общее впечатление:</legend>
+        <h2 class="form__title">Ваше общее впечатление:</h2>
         <input type="radio" id="rad1" name="radio" value="r1" checked>
         <label for="rad1">Скорее положительное</label>
         <input type="radio" id="rad2" name="radio" value="r2">
@@ -64,7 +65,7 @@
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--attractions">
-        <legend>Посещенные достопримечательности:</legend>
+        <h2 class="form__title">Посещенные достопримечательности:</h2>
         <input type="checkbox" id="ch1" checked>
         <label for="ch1">Мост Дьявола</label>
         <input type="checkbox" id="ch2" checked>
@@ -76,11 +77,11 @@
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--feedback">
-        <legend>Опишите свои эмоции:</legend>
+        <h2 class="form__title">Опишите свои эмоции:</h2>
         <textarea name="feedback" placeholder="Опишите подробно все свои восторги"></textarea>
       </fieldset>
 
-      <button class="button form__btn">Показать</button>
+      <button class="button form__btn">Отправить отзыв</button>
     </form>
   </section>
 
