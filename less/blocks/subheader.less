@@ -5,48 +5,101 @@
 }
 .subheader__cover {
   height: 390px;
+  width: 100%;
+  position: relative;
 }
 .subheader__cover--small {
   height: 160px;
 }
-.subheader__cover,
-.subheader__cover img {
+.subheader__pic {
+  height: 100%;
   width: 100%;
 }
-.subheader__cover img {
-  height: 100%;
+.subheader__cover::before {
+  position: absolute;
+  content: '';
+  background: url('../img/bg-intro-triangle-mobile.svg');
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 25px;
 }
-
+.subheader__txt {
+  position: absolute;
+  width: 280px;
+  height: 215px;
+  top: 50%;
+  left: 50%;
+  margin-top: -107px;
+  margin-left: -140px;
+}
 .subheader__text {
   text-align: center;
+  position: relative;
+  padding: 37px 25px;
 }
-.subheader__text--big {
-  padding: 55px 30px;
+.subheader__text::after {
+  position: absolute;
+  content: '';
+  background: url('../img/bg-triangle.svg');
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 37px;
 }
 .subheader__text--small {
-  padding: 30px 20px 20px;
+  padding: 37px 25px 19px;
 }
 .subheader__title {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
+
 @media @tablet-width {
-  .subheader__title--small {
-    font-size: 30px;
-  }
   .subheader__cover {
     height: 520px;
   }
+  .subheader__cover--small {
+    height: 290px;
+  }
+  .subheader__cover::before {
+    left: 50%;
+    margin-left: -160px;
+  }
+  .subheader__txt {
+    width: 460px;
+    height: 490px;
+    top: 7px;
+    left: 156px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .subheader__txt--small {
+    top: -111px;
+  }
   .subheader__text {
-    padding: 55px 80px;
+    padding: 50px 80px;
+  }
+  .subheader__text--small {
+    padding: 76px 170px 68px;
+  }
+  .subheader__title--small {
+    font-size: 30px;
   }
 }
 
 @media @desktop-width {
-  .subheader__cover {
-    height: 520px;
+  .subheader__cover--small {
+    height: 300px;
+  }
+  .subheader__txt--small {
+    top: -103px;
+  }
+  .subheader__txt {
+    left: 50%;
+    margin-left: -229px;
   }
   .subheader__text {
-    padding: 55px 350px;
+    padding: 49px 350px 51px;
   }
 }
