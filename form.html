@@ -34,26 +34,21 @@
     <form action="/echo" method="post">
       <fieldset class="form__fieldset form__fieldset--name">
         <h2 class="form__title">Представьтесь, пожалуйста:</h2>
-        <label>
-          Имя:<input class="text" type="text" name="name" value="" placeholder="Петр">
-        </label>
-        <label>
-          Фамилия:<input class="text" type="text" name="surname" value="" placeholder="Иванов">
-        </label>
-        <label>
-          Отчество:<input class="text" type="text" name="patronymic" value="" placeholder="Александрович">
-        </label>
+        <label for="name">Имя:</label>
+        <input class="text" type="text" id="name" name="name" value="" placeholder="Петр">
+        <label for="surname">Фамилия:</label>
+        <input class="text" type="text" id="surname" name="surname" value="" placeholder="Иванов">
+        <label for="patronymic">Отчество:</label>
+        <input class="text" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--contacts">
         <h2 class="form__title">Контактная информация:</h2>
-        <label>
-          Контактный телефон: <input class="tel" type="tel" name="tel" value="" placeholder="Введите телефон">
-        </label>
+        <label for="tel">Контактный телефон:</label>
+        <input class="tel" type="tel" id="tel" name="tel" value="" placeholder="Введите телефон">
         <span class="form__error">Ошибка, перепроверьте номер</span>
-        <label>
-          Электронная почта: <input class="e-mail" type="email" name="e-mail" value="" placeholder="Введите e-mail">
-        </label>
+        <label for="e-mail">Электронная почта:</label>
+        <input class="e-mail" type="email" id="e-mail" name="e-mail" value="" placeholder="Введите e-mail">
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--impression">
