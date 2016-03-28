@@ -1,26 +1,39 @@
-.form,
 .form form {
   .container;
   background: #fff;
 
   display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.form__fieldset,
-.form__fieldset fieldset {
+.form__fieldset {
   border: none;
   font-weight: 600;
 
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
 
 }
-.form__title,
+
 label,
 input {
   font-size: 18px;
   flex-basis: 10px;
 }
+label {
+  padding-right: 50px;
+}
+input {
+  flex: 1 50px;
+  margin: 0;
+  width: auto;
+}
+
+
+
 
 .form__fieldset--name label,
 .form__fieldset--contacts label {
@@ -91,75 +104,75 @@ textarea[placeholder] {
   }
 }
 
-// @media @tablet-width {
-//   .form__fieldset {
-//     min-height: 200px;
-//     width: 648px;
-//   }
-//   .form__title {
-//     margin-bottom: 30px;
-//     text-align: center;
-//     padding: 0 160px;
-//     position: relative;
-//   }
-//   .form__title::after {
-//     content: "";
-//     position: absolute;
-//     height: 1px;
-//     width: 100%;
-//     background-color: #e5e5e5;
-//     top: 50%;
-//     left: 0;
-//     z-index: -2;
-//   }
-//   .form__title::before {
-//     content: "";
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     background-color: #fff;
-//     width: 400px;
-//     top: 0;
-//     left: 50%;
-//     margin-left: -200px;
-//     z-index: -1;
-//   }
-//   .form__fieldset--name .form__title,
-//   .form__fieldset--impression .form__title {
-//     padding: 0;
-//     text-align: left;
-//   }
-//   .form__fieldset--name .form__title::after,
-//   .form__fieldset--impression .form__title::after,
-//   .form__fieldset--name .form__title::before,
-//   .form__fieldset--impression .form__title::before {
-//     display: none;
-//   }
-//   .form__fieldset--attractions label {
-//     display: inline-block;
-//     width: 240px;
-//   }
-//   .form__btn {
-//     position: absolute;
-//     bottom: 0;
-//     left: 50%;
-//     margin-left: -140px;
-//   }
-// }
-//
-// @media @desktop-width {
-//   .form__fieldset {
-//     width: 960px;
-//     left: 120px;
-//   }
-//   .form__fieldset--name,
-//   .form__fieldset--impression {
-//     width: 480px;
-//   }
-//   .form__fieldset--name {
-//     left: 50%;
-//   }
-//   .form__fieldset--attractions label {
-//     width: 140px;
-//   }
-// }
+
+
+@media @tablet-width {
+  .form form {
+    flex-direction: row;
+  }
+  .form__title {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 160px;
+    position: relative;
+  }
+  .form__title::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+  }
+  .form__title::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    width: 400px;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    z-index: -1;
+  }
+  .form__fieldset--impression {
+    order: -1;
+  }
+  // .form__fieldset--name .form__title,
+  // .form__fieldset--impression .form__title {
+  //   padding: 0;
+  //   text-align: left;
+  // }
+  // .form__fieldset--name .form__title::after,
+  // .form__fieldset--impression .form__title::after,
+  // .form__fieldset--name .form__title::before,
+  // .form__fieldset--impression .form__title::before {
+  //   display: none;
+  // }
+  // .form__fieldset--attractions label {
+  //   display: inline-block;
+  //   width: 240px;
+  // }
+  // .form__btn {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 50%;
+  //   margin-left: -140px;
+  // }
+}
+
+@media @desktop-width {
+  .form__fieldset {
+    width: 960px;
+  }
+  // .form__fieldset--name,
+  // .form__fieldset--impression {
+  //   width: 480px;
+  // }
+  // .form__fieldset--attractions label {
+  //   width: 140px;
+  // }
+}
