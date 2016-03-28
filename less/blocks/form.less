@@ -4,27 +4,26 @@
 
   display: flex;
   flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+
+  padding-bottom: 37px;
 }
 .form__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
+
   font-weight: 600;
 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   box-sizing: border-box;
-
 }
 
-label,
-input {
-  font-size: 18px;
-  flex-basis: 10px;
-}
+
 label {
-  padding-right: 50px;
+  // padding-right: 50px;
 }
 input {
   flex: 1 50px;
@@ -33,7 +32,15 @@ input {
 }
 
 
-
+label,
+input {
+  font-size: 18px;
+}
+input,
+.form__fieldset--impression label,
+.form__fieldset--attractions label {
+  text-transform: none;
+}
 
 .form__fieldset--name label,
 .form__fieldset--contacts label {
@@ -54,32 +61,47 @@ input {
   line-height: 20px;
   vertical-align: middle;
 }
-input,
-.form__fieldset--impression label,
-.form__fieldset--attractions label {
-  text-transform: none;
+
+.form__fieldset--contacts .form__title {
+  margin-bottom: 22px;
 }
-.form__fieldset--impression label,
-.form__fieldset--attractions label {
-  margin-bottom: 30px;
-  margin-left: 70px;
+.form__fieldset--contacts label {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 21px;
 }
-.form__fieldset input[type=checkbox],
-.form__fieldset input[type=radio] {
-  display: none;
+.form__fieldset--contacts label:nth-of-type(2) {
+  margin-top: 17px;
 }
-textarea {
-  border: none;
-  padding: 20px;
-  background: #f2f2f2;
-  height: 160px;
-  color: #000;
-  font-size: 18px;
+.form__fieldset--contacts input {
+  width: 100%;
+  padding: 19px 21px;
+  margin-bottom: 10px;
 }
-textarea[placeholder] {
-  color: #000;
-  font-size: 18px;
+.form__fieldset--contacts input:nth-of-type(2) {
+  margin-bottom: 7px;
 }
+.form__fieldset--contacts label::before {
+  position: absolute;
+  content: "";
+  width: 57px;
+  height: 57px;
+  top: 30px;
+  right: 0;
+  background: #e6e6e6;
+}
+.form__fieldset--contacts label::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 49px;
+  right: 19px;
+  background: url("../img/icon-phone.svg");
+}
+// .form__fieldset--contacts input[type=email]+label::after {
+//   background: url("../img/icon-mail.svg");
+// }
 .form__error {
   color: #ff5c5c;
   font-size: 14px;
@@ -87,6 +109,57 @@ textarea[placeholder] {
   text-transform: none;
   text-align: left;
   font-weight: normal;
+  padding-left: 21px;
+}
+
+
+.form__fieldset--impression label {
+  padding-top: 10px;
+  padding-left: 80px;
+  padding-bottom: 40px;
+}
+.form__fieldset--impression label:last-child {
+  padding-bottom: 25px;
+}
+.form__fieldset--attractions label {
+  padding-top: 6px;
+  padding-left: 80px;
+  padding-bottom: 54px;
+}
+.form__fieldset--attractions label:last-child {
+  padding-bottom: 23px;
+}
+
+.form__fieldset input[type=checkbox],
+.form__fieldset input[type=radio] {
+  display: none;
+}
+
+.form__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.form__fieldset--feedback .form__title {
+  margin-bottom: 15px;
+}
+
+textarea {
+  border: none;
+  padding: 20px;
+  background: #f2f2f2;
+  height: 160px;
+  color: #000;
+  font-size: 18px;
+  width: 100%;
+}
+textarea[placeholder] {
+  color: #000;
+  font-size: 18px;
+  line-height: 25px;
+}
+.form__btn {
+  margin: 32px 20px 0;
+  padding: 19px 45px;
 }
 
 
@@ -95,84 +168,93 @@ textarea[placeholder] {
     padding: 20px;
     border-top: 1px solid #e5e5e5;
   }
-  .form__title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .form__btn {
-    margin: 0 20px;
-  }
 }
-
 
 
 @media @tablet-width {
   .form form {
     flex-direction: row;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
   }
-  .form__title {
-    margin-bottom: 30px;
-    text-align: center;
-    padding: 0 160px;
-    position: relative;
+  .form__fieldset {
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 60px;
   }
-  .form__title::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background-color: #e5e5e5;
-    top: 50%;
-    left: 0;
-    z-index: -2;
-  }
-  .form__title::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    width: 400px;
-    top: 0;
-    left: 50%;
-    margin-left: -200px;
-    z-index: -1;
+  .form__fieldset--name,
+  .form__fieldset--impression {
+    flex-basis: 50%;
   }
   .form__fieldset--impression {
     order: -1;
   }
-  // .form__fieldset--name .form__title,
-  // .form__fieldset--impression .form__title {
-  //   padding: 0;
-  //   text-align: left;
-  // }
-  // .form__fieldset--name .form__title::after,
-  // .form__fieldset--impression .form__title::after,
-  // .form__fieldset--name .form__title::before,
-  // .form__fieldset--impression .form__title::before {
-  //   display: none;
-  // }
-  // .form__fieldset--attractions label {
-  //   display: inline-block;
-  //   width: 240px;
-  // }
-  // .form__btn {
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 50%;
-  //   margin-left: -140px;
-  // }
+  input,
+  label {
+    padding: 0;
+    margin: 0;
+  }
+
+  .form__title {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .form__title::after {
+    position: absolute;
+    content: "";
+    z-index: -2;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: #e5e5e5;
+  }
+  .form__title::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 400px;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    background-color: #fff;
+  }
+  .form__fieldset--name .form__title::after,
+  .form__fieldset--impression .form__title::after,
+  .form__fieldset--name .form__title::before,
+  .form__fieldset--impression .form__title::before {
+    display: none;
+  }
+  .form__fieldset--contacts .form__title,
+  .form__fieldset--attractions .form__title,
+  .form__fieldset--feedback .form__title {
+    text-align: center;
+  }
+  .form__fieldset--attractions .form__title {
+    padding: 0 120px;
+  }
+
+  
+  .form__fieldset--impression label {
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-bottom: 40px;
+  }
+  .form__fieldset--impression label:last-child {
+    padding-bottom: 25px;
+  }
+  .form__fieldset--attractions label {
+    padding-top: 6px;
+    padding-left: 80px;
+    padding-bottom: 54px;
+  }
+  .form__fieldset--attractions label:last-child {
+    padding-bottom: 23px;
+  }
 }
 
 @media @desktop-width {
-  .form__fieldset {
-    width: 960px;
-  }
-  // .form__fieldset--name,
-  // .form__fieldset--impression {
-  //   width: 480px;
-  // }
-  // .form__fieldset--attractions label {
-  //   width: 140px;
-  // }
 }
