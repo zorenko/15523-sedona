@@ -20,7 +20,24 @@
 @import "blocks/video.less";
 
 @bg-color: #f2f2f2;
+
 @blue: #81b3d2;
+@blue-hvr: #669ec0;
+@blue-down: #5496bd;
+@btn-text-down: rgba(255,255,255,.3);
+@btn-disabled: #e5e5e5;
+
+@text-gray: #333333;
+@bg-gray: #eeeeee;
+@stroke-gray: #d6d6d6;
+
+@menu-down: rgba(0,0,0,.3);
+
+@menu-active: #766357;
+@menu-active-hvr: #604e43;
+@menu-active-down: rgba(118,99,87,.3);
+
+
 @mobile-width: ~"(max-width: 767px)";
 @tablet-width: ~"(min-width: 768px)";
 @desktop-width: ~"(min-width: 1200px)";
@@ -59,6 +76,7 @@ body {
   color: #333333;
   background-color: @bg-color;
 }
+
 a, button:focus, input:focus, textarea:focus, h2, h3 {
   outline: none;
 }
@@ -81,20 +99,9 @@ h1, h2 {
     font-size: 21px;
   }
 }
-
 p {
   line-height: 26px;
 }
 button {
   border: none;
-}
-.button {
-  display: inline-block;
-  background: @blue;
-  color: #fff;
-  font-weight: 600;
-  font-size: 21px;
-  padding: 15px 45px;
-  margin-top: 25px;
-  text-transform: uppercase;
 }

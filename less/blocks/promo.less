@@ -1,104 +1,150 @@
 .promo {
   .container;
-  .clearfix;
+  // .clearfix;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+.promo__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 200px;
+}
+
 .promo--obverse {
   background-color: @blue;
+  color: #fff;
 }
 .promo--obverse .promo__item {
-  color: #fff;
-  padding: 55px 30px;
+  padding: 50px 20px 30px;
 }
 .promo--obverse .promo__photo {
-  width: 100%;
-  height: 260px;
+  height: 256px;
 }
 .promo--obverse .promo__photo img {
   width: 100%;
   height: 100%;
 }
+
+
 .promo--additional {
   background-color: #fff;
-  text-align: left;
+  padding: 44px 40px 17px 71px;
 }
 .promo--additional .promo__item {
-  padding-bottom: 40px;
+  align-items: flex-start;
+  flex-basis: 120px;
+  justify-content: space-around;
+  text-align: left;
+  position: relative;
 }
+.promo--additional .promo__item::before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  left: -70px;
+  width: 70px;
+  height: 72px;
+  background: url('../img/icon-house.svg');
+}
+.promo--additional .promo__item--souvenir::before {
+  background: url('../img/icon-gift.svg');
+}
+.promo--additional .promo__item--food::before {
+  background: url('../img/icon-burger.svg');
+}
+
 .promo--reverse {
-  background: #eeeeee;
+  background: @bg-gray;
 }
 .promo--reverse .promo__item {
-  padding: 30px 20px;
+  padding: 30px 15px;
 }
 
 @media @mobile-width {
-  .promo--additional {
-    padding: 40px 40px 40px 70px;
-  }
-  .promo--additional .promo__item:last-child {
-    padding: 0;
-  }
   .promo--reverse {
     padding: 0 20px;
   }
   .promo--reverse .promo__item {
-    border-bottom: 1px solid #d6d6d6;
+    flex-basis: 167px;
+    border-bottom: 1px solid @stroke-gray;
+  }
+  .promo--reverse .promo__item:last-child {
+    border: none;
   }
 }
 
 @media @tablet-width {
+  .promo {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .promo__item {
+    flex-basis: 33%;
+    flex-grow: 1;
+  }
   .promo--obverse .promo__item {
-    width: 256px;
-    float: left;
+    padding: 48px 40px 40px;
   }
   .promo--obverse .promo__photo {
-    width: 512px;
-    float: right;
-  }
-  .promo--additional .promo__item,
-  .promo--reverse .promo__item {
-    width: 256px;
-    float: left;
-    padding: 160px 40px 50px;
+    flex-basis: 66%;
   }
   .promo--obverse:nth-of-type(4) .promo__item {
-    width: 256px;
-    float: right;
+    order: 1;
   }
-  .promo--obverse:nth-of-type(4) .promo__photo {
-    width: 512px;
-    float: left;
+  .promo--additional {
+    padding: 0;
+  }
+  .promo--additional .promo__item--souvenir {
+    order: 1;
+  }
+  .promo--additional .promo__item {
+    align-items: center;
+    text-align: center;
+    padding: 164px 40px 50px;
+  }
+  .promo--additional .promo__item::before {
+    top: 60px;
+    left: 50%;
+    width: 70px;
+    height: 72px;
+    margin-left: -40px;
+  }
+  .promo--additional .promo__title {
+    font-size: 21px;
+    margin-bottom: 20px;
   }
   .promo--reverse .promo__item {
-    padding: 50px 40px;
+    padding: 47px 50px 33px;
+  }
+  .promo--reverse .promo__title {
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+  .promo--reverse .promo__number {
+    margin-bottom: 15px;
   }
 }
 
 @media @desktop-width {
   .promo--obverse .promo__item {
-    width: 400px;
-    float: left;
+    padding: 53px 60px 40px;
   }
-  .promo--obverse .promo__photo {
-    width: 800px;
-    float: right;
+  .promo--obverse .promo__title {
+    padding: 0 50px;
   }
-  .promo--additional .promo__item,
-  .promo--reverse .promo__item {
-    width: 400px;
-    float: left;
-    padding: 160px 40px 50px;
-  }
-  .promo--obverse:nth-of-type(4) .promo__item {
-    width: 400px;
-    float: right;
-  }
-  .promo--obverse:nth-of-type(4) .promo__photo {
-    width: 800px;
-    float: left;
+  .promo--additional .promo__item {
+    padding: 164px 70px 75px;
   }
   .promo--reverse .promo__item {
-    padding: 50px 40px;
+    padding: 47px 60px 58px;
+  }
+  .promo--reverse .promo__title {
+    padding: 0 70px;
+    margin-bottom: 11px;
+  }
+  .promo--reverse .promo__number {
+    margin-bottom: 20px;
   }
 }

@@ -7,12 +7,13 @@
 </head>
 <body>
   <header class="main-header">
-    <a href="index.html" class="main-header__logo"><img src="http://placehold.it/103x83" alt="Sedona"></a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened">
+      <span class="main-nav__toggle main-nav__toggle--opened">Открыть меню</span>
       <ul class="main-nav__items">
+        <li class="main-nav__item main-nav__logo"><a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Sedona"></a></li>
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
         <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
-        <li class="main-nav__item main-nav__item--active"><a>Форма отзыва</a></li>
+        <li class="main-nav__item main-nav__item--active"><a href="form.html">Форма отзыва</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
       </ul>
     </nav>
@@ -20,7 +21,8 @@
 
   <section class="subheader">
     <div class="subheader__cover subheader__cover--small">
-      <img src="http://placehold.it/320x160" class="subheader__pic subheader__pic--small">
+      <img src="img/bg-back-mobile.jpg" class="subheader__pic">
+      <img src="img/text-sedona.svg" class="subheader__txt subheader__txt--small">
     </div>
     <div class="subheader__text subheader__text--small">
       <h1 class="subheader__title subheader__title--small">Оставьте свой отзыв</h1>
@@ -30,28 +32,25 @@
 
   <section class="form">
     <form action="/echo" method="post">
-      <fieldset class="form__fieldset form__fieldset--name">
-        <h2 class="form__title">Представьтесь, пожалуйста:</h2>
-        <label>
-          Имя:<input class="text" type="text" name="name" value="" placeholder="Петр">
-        </label>
-        <label>
-          Фамилия:<input class="text" type="text" name="surname" value="" placeholder="Иванов">
-        </label>
-        <label>
-          Отчество:<input class="text" type="text" name="patronymic" value="" placeholder="Александрович">
-        </label>
-      </fieldset>
+      <div class="form__fieldset form__fieldset--name">
+        <h2 class="form__title">Представьтесь<span>, пожалуйста</span>:</h2>
+        <label for="name">Имя:</label>
+        <input class="text" type="text" id="name" name="name" value="" placeholder="Петр">
+        <label for="surname">Фамилия:</label>
+        <input class="text" type="text" id="surname" name="surname" value="" placeholder="Иванов">
+        <label for="patronymic">Отчество:</label>
+        <input class="text" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
+      </div>
 
       <fieldset class="form__fieldset form__fieldset--contacts">
-        <h2 class="form__title">Контактная информация:</h2>
-        <label>
-          Контактный телефон: <input class="tel" type="tel" name="tel" value="" placeholder="Введите телефон">
-        </label>
-        <span class="form__error">Ошибка, перепроверьте номер</span>
-        <label>
-          Электронная почта: <input class="e-mail" type="email" name="e-mail" value="" placeholder="Введите e-mail">
-        </label>
+        <div>
+          <h2 class="form__title">Контактная информация:</h2>
+          <label for="tel"><span>Контактный </span>телефон:</label>
+          <span class="form__icon form__icon--tel"><input class="tel" type="tel" id="tel" name="tel" value="" placeholder="Введите телефон"></span>
+          <span class="form__error">Ошибка, перепроверьте номер</span>
+          <label for="e-mail">Электронная почта:</label>
+          <span class="form__icon form__icon--email"><input class="e-mail" type="email" id="e-mail" name="e-mail" value="" placeholder="Введите e-mail"></span>
+        </div>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--impression">
@@ -66,14 +65,24 @@
 
       <fieldset class="form__fieldset form__fieldset--attractions">
         <h2 class="form__title">Посещенные достопримечательности:</h2>
-        <input type="checkbox" id="ch1" checked>
-        <label for="ch1">Мост Дьявола</label>
-        <input type="checkbox" id="ch2" checked>
-        <label for="ch2">Слайд-парк</label>
-        <input type="checkbox" id="ch3">
-        <label for="ch3">Гора-Колокол</label>
-        <input type="checkbox" id="ch4" checked>
-        <label for="ch4">Красные скалы</label>
+        <ul>
+          <li>
+            <input type="checkbox" id="ch1" checked>
+            <label for="ch1">Мост Дьявола</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch2" checked>
+            <label for="ch2">Слайд-парк</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch3">
+            <label for="ch3">Гора-Колокол</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch4" checked>
+            <label for="ch4">Красные скалы</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--feedback">
