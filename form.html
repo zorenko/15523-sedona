@@ -32,23 +32,25 @@
 
   <section class="form">
     <form action="/echo" method="post">
-      <fieldset class="form__fieldset form__fieldset--name">
-        <h2 class="form__title">Представьтесь, пожалуйста:</h2>
+      <div class="form__fieldset form__fieldset--name">
+        <h2 class="form__title">Представьтесь<span>, пожалуйста</span>:</h2>
         <label for="name">Имя:</label>
         <input class="text" type="text" id="name" name="name" value="" placeholder="Петр">
         <label for="surname">Фамилия:</label>
         <input class="text" type="text" id="surname" name="surname" value="" placeholder="Иванов">
         <label for="patronymic">Отчество:</label>
         <input class="text" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
-      </fieldset>
+      </div>
 
       <fieldset class="form__fieldset form__fieldset--contacts">
-        <h2 class="form__title">Контактная информация:</h2>
-        <label for="tel">Контактный телефон:</label>
-        <input class="tel" type="tel" id="tel" name="tel" value="" placeholder="Введите телефон">
-        <span class="form__error">Ошибка, перепроверьте номер</span>
-        <label for="e-mail">Электронная почта:</label>
-        <input class="e-mail" type="email" id="e-mail" name="e-mail" value="" placeholder="Введите e-mail">
+        <div>
+          <h2 class="form__title">Контактная информация:</h2>
+          <label for="tel"><span>Контактный </span>телефон:</label>
+          <span class="form__icon form__icon--tel"><input class="tel" type="tel" id="tel" name="tel" value="" placeholder="Введите телефон"></span>
+          <span class="form__error">Ошибка, перепроверьте номер</span>
+          <label for="e-mail">Электронная почта:</label>
+          <span class="form__icon form__icon--email"><input class="e-mail" type="email" id="e-mail" name="e-mail" value="" placeholder="Введите e-mail"></span>
+        </div>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--impression">
@@ -63,14 +65,24 @@
 
       <fieldset class="form__fieldset form__fieldset--attractions">
         <h2 class="form__title">Посещенные достопримечательности:</h2>
-        <input type="checkbox" id="ch1" checked>
-        <label for="ch1">Мост Дьявола</label>
-        <input type="checkbox" id="ch2" checked>
-        <label for="ch2">Слайд-парк</label>
-        <input type="checkbox" id="ch3">
-        <label for="ch3">Гора-Колокол</label>
-        <input type="checkbox" id="ch4" checked>
-        <label for="ch4">Красные скалы</label>
+        <ul>
+          <li>
+            <input type="checkbox" id="ch1" checked>
+            <label for="ch1">Мост Дьявола</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch2" checked>
+            <label for="ch2">Слайд-парк</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch3">
+            <label for="ch3">Гора-Колокол</label>
+          </li>
+          <li>
+            <input type="checkbox" id="ch4" checked>
+            <label for="ch4">Красные скалы</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--feedback">
