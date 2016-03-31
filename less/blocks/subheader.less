@@ -2,6 +2,8 @@
   .container;
   .clearfix;
   background-color: #fff;
+  position: relative;
+  z-index: -3;
 }
 .subheader__cover {
   height: 390px;
@@ -14,6 +16,8 @@
 .subheader__pic {
   height: 100%;
   width: 100%;
+  position: relative;
+  z-index: -2;
 }
 .subheader__cover::before {
   position: absolute;
@@ -25,13 +29,14 @@
   height: 25px;
 }
 .subheader__txt {
-    position: absolute;
-    width: 230px;
-    height: 175px;
-    top: 50%;
-    left: 50%;
-    margin-top: -97px;
-    margin-left: -115px;
+  position: absolute;
+  width: 230px;
+  height: 175px;
+  top: 50%;
+  left: 50%;
+  margin-top: -97px;
+  margin-left: -115px;
+  z-index: -1;
 }
 .subheader__text {
   text-align: center;
@@ -105,7 +110,7 @@
     margin-left: -229px;
   }
   .subheader__text {
-    padding: 116px 370px 55px;
+    padding: 116px 370px 58px;
   }
   .gallery__wrapper {
     padding: 24px 22px;
