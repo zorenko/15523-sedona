@@ -30,17 +30,11 @@
 .form__fieldset--feedback .form__title {
   margin-bottom: 15px;
 }
-
-label {
-  // padding-right: 50px;
-}
 input {
   flex: 1 150px;
   margin: 0;
   width: auto;
 }
-
-
 label,
 input {
   font-size: 18px;
@@ -83,10 +77,10 @@ input,
   margin-bottom: 4px;
 }
 .form__fieldset--contacts .form__title {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 .form__fieldset--contacts label {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   margin-left: 21px;
 }
 .form__fieldset--contacts label:nth-of-type(2) {
@@ -100,7 +94,7 @@ input,
 .form__icon {
   position: relative;
   flex-basis: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .form__icon:last-child {
   margin-bottom: 7px;
@@ -153,10 +147,13 @@ input,
 .form__fieldset--impression label {
   padding-top: 19px;
   padding-left: 78px;
-  padding-bottom: 31px;
+  padding-bottom: 28px;
 }
 .form__fieldset--impression label:last-child {
-  padding-bottom: 25px;
+  padding-bottom: 26px;
+}
+.form__fieldset--attractions {
+  padding-bottom: 15px;
 }
 .form__fieldset--attractions ul {
   display: flex;
@@ -184,8 +181,8 @@ input,
   background: @bg-color;
 }
 .form__fieldset input[type=checkbox]+label::before {
-  top: -15px;
-  left: 0x;
+  top: -17px;
+  left: 0;
   border-radius: 5px;
 }
 .form__fieldset input[type=radio]:checked+label::after,
@@ -200,11 +197,12 @@ input,
   background: @text-gray;
 }
 .form__fieldset input[type=checkbox]:checked+label::after {
-  width: 22px;
-  height: 15px;
-  top: 6px;
-  left: 19px;
+  width: 24px;
+  height: 17px;
+  top: 2px;
+  left: 16px;
   background: url("../img/icon-tick.svg");
+  background-size: 24px 17px;
 }
 
 
@@ -224,7 +222,7 @@ textarea[placeholder] {
 }
 .form__btn {
   margin: 32px 20px 0;
-  padding: 19px 45px;
+  padding: 18px 45px;
 }
 
 
@@ -242,7 +240,7 @@ textarea[placeholder] {
 @media @tablet-width {
   .form form {
     flex-direction: row;
-    padding: 0 60px 62px;
+    padding: 5px 60px 59px;
   }
   input,
   label {
@@ -285,16 +283,16 @@ textarea[placeholder] {
   .form__fieldset--impression label {
     padding-top: 19px;
      padding-left: 75px;
-     padding-bottom: 40px;
+     padding-bottom: 38px;
   }
   .form__fieldset--impression label:last-child {
     padding-bottom: 25px;
   }
   .form__fieldset--contacts {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
   .form__fieldset--contacts .form__title {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     order: -3;
   }
   .form__fieldset--contacts label:first-of-type {
@@ -307,14 +305,18 @@ textarea[placeholder] {
   .form__fieldset--attractions {
     margin-bottom: 25px;
   }
+  .form__fieldset--attractions .form__title {
+    padding: 0 120px;
+    margin-bottom: 53px;
+  }
   .form__fieldset--attractions ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 96px;
   }
   .form__fieldset--attractions li {
-    flex-basis: 42%;
+    flex-basis: 43%;
     padding-top: 5px;
     padding-bottom: 60px;
   }
@@ -332,12 +334,6 @@ textarea[placeholder] {
   }
   .form__fieldset--attractions li:nth-child(2) {
     order: -1;
-  }
-  .form__fieldset--attractions label {
-    // padding-left: 102px;
-  }
-  .form__fieldset--attractions label:last-child {
-    // padding-bottom: 23px;
   }
   .form__fieldset--feedback .form__title {
     margin-bottom: 58px;
@@ -387,14 +383,11 @@ textarea[placeholder] {
     text-align: center;
     flex-basis: 100%;
   }
-  .form__fieldset--attractions .form__title {
-    padding: 0 120px;
-  }
 }
 
 @media @desktop-width {
   .form form {
-    padding: 0 120px 62px;
+    padding: 0 120px 67px;
   }
   .form__fieldset--name {
     padding-left: 78px;
@@ -412,14 +405,17 @@ textarea[placeholder] {
   .form__fieldset--impression label {
     padding-left: 80px;
   }
+  .form__fieldset--impression label {
+    padding-bottom: 37px;
+  }
   .form__title span {
     display: inline;
   }
   .form__fieldset--contacts {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
   .form__fieldset--contacts .form__title {
-    margin-bottom: 46px;
+    margin-bottom: 42px;
   }
   .form__fieldset--contacts label {
     margin-left: 0;
@@ -435,16 +431,17 @@ textarea[placeholder] {
     order: -3;
     flex-basis: 100%;
     margin-left: 106px;
-    margin-bottom: 11px;
+    margin-bottom: 9px;
   }
   .form__icon {
     flex-basis: 317px;
   }
   .form__fieldset--attractions {
-    margin-bottom: 34px;
+    margin-bottom: 39px;
   }
   .form__fieldset--attractions .form__title {
     padding: 0 280px;
+    margin-bottom: 52px;
   }
   .form__fieldset--attractions ul {
     padding: 0;
@@ -457,8 +454,11 @@ textarea[placeholder] {
   }
   .form__fieldset--attractions label {
   }
+  .form__fieldset--feedback .form__title {
+    margin-bottom: 56px;
+  }
   .form__btn {
     margin: 0;
-    padding: 19px 149px;
+    padding: 18px 149px;
   }
 }

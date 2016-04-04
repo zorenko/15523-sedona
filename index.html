@@ -11,7 +11,15 @@
     <nav class="main-nav main-nav--opened">
       <span class="main-nav__toggle main-nav__toggle--opened">Открыть меню</span>
       <ul class="main-nav__items">
-        <li class="main-nav__item main-nav__logo"><a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Sedona"></a></li>
+        <li class="main-nav__item main-nav__logo">
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
+            </picture>
+          </a>
+        </li>
         <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
         <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
         <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
@@ -21,10 +29,7 @@
   </header>
 
   <section class="subheader">
-    <div class="subheader__cover subheader__cover--big">
-      <img src="img/bg-back-mobile.jpg" class="subheader__pic">
-      <img src="img/text-sedona-index.svg" class="subheader__txt">
-    </div>
+    <div class="subheader__cover"></div>
     <div class="subheader__text">
       <h1 class="subheader__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -37,9 +42,7 @@
       <span class="promo__number">&ndash; №1 &ndash;</span>
       <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
     </div>
-    <div class="promo__photo">
-      <img src="img/photo-city.jpg">
-    </div>
+    <div class="promo__photo"></div>
   </section>
 
   <section class="promo promo--additional">
@@ -63,9 +66,7 @@
       <span class="promo__number">&ndash; №2 &ndash;</span>
       <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
     </div>
-    <div class="promo__photo">
-      <img src="img/photo-bridge.jpg">
-    </div>
+    <div class="promo__photo"></div>
   </section>
 
   <section class="promo promo--reverse">
@@ -93,7 +94,6 @@
   </section>
 
   <section class="map">
-
   </section>
 
   <footer class="main-footer">

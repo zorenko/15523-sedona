@@ -1,7 +1,7 @@
 .main-footer {
   .container;
   .clearfix;
-  padding: 40px 80px;
+  padding: 40px 85px;
   text-align: center;
   background: #fff;
   display: flex;
@@ -16,14 +16,14 @@
 
 .main-footer__social {
   margin-top: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   display: flex;
   justify-content: space-between;
 }
 
 .main-footer__social-btn {
   position: relative;
-  width: 49px;
+  width: 46px;
   height: 49px;
   background: @blue;
 }
@@ -31,22 +31,22 @@
   position: absolute;
   content: "";
   width: 17px;
-  height: 13px;
+  height: 14px;
   top: 17px;
-  left: 16px;
+  left: 14px;
   background: url("../img/icon-twitter.svg");
 }
 .main-footer__social-btn--fb::after {
   width: 9px;
   height: 18px;
-  top: 16px;
-  left: 20px;
+  top: 13px;
+  left: 19px;
   background: url("../img/icon-facebook.svg");
 }
 .main-footer__social-btn--yt::after {
-  width: 18px;
+  width: 19px;
   height: 14px;
-  top: 18px;
+  top: 17px;
   left: 14px;
   background: url("../img/icon-youtube.svg");
 }
@@ -57,30 +57,34 @@
 .main-footer__madeby a::after {
   position: absolute;
   content: "";
-  width: 43px;
-  height: 40px;
-  top: -15px;
-  right: -10px;
-  background: url("../img/htmlacademy.svg");
+  width: 27px;
+  height: 34px;
+  top: -10px;
+  right: 0;
+  background: url("../img/logo-htmlacademy.svg");
+  background-size: 27px 34px;
 }
 
 @media @tablet-width {
   .main-footer {
-  padding: 35px 60px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    padding: 36px 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .main-footer__social {
-    flex-basis: 158px;
+    flex-basis: 160px;
     margin: auto;
-  }
-  .main-footer__madeby {
+    padding-right: 10px;
   }
 }
 
 @media @desktop-width {
   .main-footer {
-  padding: 39px 45px 35px 133px;
+    padding: 35px 44px 35px 133px;
+  }
+  .main-footer__social {
+    flex-basis: 247px;
+    padding-right: 96px;
   }
 }

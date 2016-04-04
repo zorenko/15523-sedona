@@ -6,27 +6,54 @@
   z-index: -3;
 }
 .subheader__cover {
-  height: 390px;
+  height: 389px;
   width: 100%;
   position: relative;
+  background-color: #E4F1F9;
+  background-image: url("../img/bg-back-mobile.jpg");
+  background-size: 768px 389px;
+  background-position: bottom;
+  z-index: -2;
+}
+@media
+  (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+   .subheader__cover {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 .subheader__cover--small {
-  height: 160px;
-}
-.subheader__pic {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: -2;
+  height: 156px;
 }
 .subheader__cover::before {
   position: absolute;
   content: '';
-  background: url('../img/bg-intro-triangle-mobile.svg');
   bottom: 0;
   left: 0;
-  width: 320px;
-  height: 25px;
+  width: 100%;
+  height: 27px;
+  background-image: url('../img/bg-intro-triangle-mobile.svg');
+  background-size: 330px 27px;
+}
+.subheader__cover::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 282px;
+  height: 214px;
+  margin-top: -107px;
+  margin-left: -141px;
+  background-image: url('../img/text-sedona-index.svg');
+  background-size: 282px 214px;
+}
+.subheader__cover--small::after {
+  width: 229px;
+  height: 39px;
+  margin-top: -29px;
+  margin-left: -115px;
+  background-image: url('../img/text-sedona.svg');
+  background-size: 229px 39px;
 }
 .subheader__txt {
   position: absolute;
@@ -41,39 +68,62 @@
 .subheader__text {
   text-align: center;
   position: relative;
-  padding: 37px 25px;
-}
-.subheader__text::after {
-  position: absolute;
-  content: '';
-  background: url('../img/bg-triangle.svg');
-  bottom: 0;
-  left: 0;
-  width: 320px;
-  height: 37px;
+  padding: 42px 25px 26px;
 }
 .subheader__text--small {
-  padding: 36px 20px 14px;
+  padding: 40px 25px 12px; //suits to form page
+}
+.subheader__text--photo {
+  padding-bottom: 23px; //suits to photo page
 }
 .subheader__text--small p {
   line-height: 25px;
 }
 
 .subheader__title {
-  margin-bottom: 28px;
+  margin-bottom: 26px; //suits to form page
 }
-
+@media @mobile-width {
+  .subheader__text::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 37px;
+    background: url('../img/bg-triangle.svg');
+    background-size: 320px 37px;
+    z-index: 100;
+  }
+}
 
 @media @tablet-width {
   .subheader__cover {
     height: 520px;
+    background-size: 768px 520px;
   }
   .subheader__cover--small {
     height: 290px;
   }
   .subheader__cover::before {
-    left: 50%;
-    margin-left: -160px;
+    height: 57px;
+    background-image: url('../img/bg-intro-triangle-tablet.svg');
+    background-size: 768px 57px;
+  }
+  .subheader__cover::after {
+    width: 460px;
+    height: 350px;
+    margin-top: -182px;
+    margin-left: -230px;
+    background-size: 460px 350px;
+  }
+  .subheader__cover--small::after {
+    width: 458px;
+    height: 78px;
+    margin-top: -50px;
+    margin-left: -228px;
+    background-image: url('../img/text-sedona.svg');
+    background-size: 458px 78px;
   }
   .subheader__txt {
     width: 460px;
@@ -90,17 +140,32 @@
     padding: 50px 80px;
   }
   .subheader__text--small {
-    padding: 76px 160px 73px;
+    padding: 76px 160px 68px;
   }
   .subheader__title--small {
     font-size: 30px;
-    margin-bottom: 31px;
+    margin-bottom: 29px;
   }
 }
 
 @media @desktop-width {
+  .subheader__cover {
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-size: 1200px 520px;
+  }
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+     .subheader__cover {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
   .subheader__cover--small {
     height: 300px;
+  }
+  .subheader__cover::before {
+    background-image: url('../img/bg-intro-triangle-desktop.svg');
+    background-size: 1201px 57px;
   }
   .subheader__txt--small {
     top: -103px;
@@ -110,7 +175,10 @@
     margin-left: -229px;
   }
   .subheader__text {
-    padding: 116px 370px 58px;
+    padding: 49px 380px 26px;
+  }
+  .subheader__text--small {
+    padding: 114px 380px 58px;
   }
   .gallery__wrapper {
     padding: 24px 22px;

@@ -10,7 +10,15 @@
     <nav class="main-nav main-nav--opened">
       <span class="main-nav__toggle main-nav__toggle--opened">Открыть меню</span>
       <ul class="main-nav__items">
-        <li class="main-nav__item main-nav__logo"><a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Sedona"></a></li>
+        <li class="main-nav__item main-nav__logo">
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84">
+            </picture>
+          </a>
+        </li>
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
         <li class="main-nav__item main-nav__item--active"><a>Фото и видео</a></li>
         <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
@@ -20,11 +28,8 @@
   </header>
 
   <section class="subheader">
-    <div class="subheader__cover subheader__cover--small">
-      <img src="img/bg-back-mobile.jpg" class="subheader__pic">
-      <img src="img/text-sedona.svg" class="subheader__txt subheader__txt--small">
-    </div>
-    <div class="subheader__text subheader__text--small">
+    <div class="subheader__cover subheader__cover--small"></div>
+    <div class="subheader__text subheader__text--small subheader__text--photo">
       <h1 class="subheader__title subheader__title--small">Фото и видео</h1>
       <p>Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     </div>
@@ -32,43 +37,127 @@
 
   <section class="gallery">
     <article class="gallery__photo gallery__photo--big">
-      <div class="gallery__img"><img src="img/photo-1-mobile.jpg"></div>
+      <div class="gallery__img">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+          <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы" width="280" height="280">
+        </picture>
+      </div>
       <div class="gallery__wrapper">
         <div class="gallery__info">
           <h3 class="gallery__title">Неродные просторы</h3>
           <span class="gallery__author">Автор фото: Борис</span>
         </div>
-        <span class="gallery__likes">1350</span>
+        <div class="gallery__likes">
+          <svg class="gallery__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+            <g id="Page-1">
+              <g id="Core" transform="translate(-295.000000, -464.000000)">
+                <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                  <path id="Shape" fill="#a9a9a9" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029
+                  l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1
+                  C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z
+                  M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          1350
+        </div>
       </div>
     </article>
     <article class="gallery__photo">
-      <div class="gallery__img"><img src="img/photo-2-mobile.jpg"></div>
+      <div class="gallery__img">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+          <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность" width="280" height="280">
+        </picture>
+      </div>
       <div class="gallery__wrapper">
         <div class="gallery__info">
           <h3 class="gallery__title">Местная растительность</h3>
           <span class="gallery__author">Автор фото: Сергей</span>
         </div>
-        <span class="gallery__likes">143</span>
+        <div class="gallery__likes">
+          <svg class="gallery__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+            <g id="Page-1">
+              <g id="Core" transform="translate(-295.000000, -464.000000)">
+                <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                  <path id="Shape" fill="#a9a9a9" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029
+                  l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1
+                  C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z
+                  M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          143
+        </div>
       </div>
     </article>
     <article class="gallery__photo">
-      <div class="gallery__img"><img src="img/photo-3-mobile.jpg"></div>
+      <div class="gallery__img">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+          <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север" width="280" height="280">
+        </picture>
+      </div>
       <div class="gallery__wrapper">
         <div class="gallery__info">
           <h3 class="gallery__title">Дорога на север</h3>
           <span class="gallery__author">Автор фото: Петр</span>
         </div>
-        <span class="gallery__likes">96</span>
+        <div class="gallery__likes">
+          <svg class="gallery__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+            <g id="Page-1">
+              <g id="Core" transform="translate(-295.000000, -464.000000)">
+                <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                  <path id="Shape" fill="#a9a9a9" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029
+                  l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1
+                  C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z
+                  M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          96
+        </div>
       </div>
     </article>
     <article class="gallery__photo">
-      <div class="gallery__img"><img src="img/photo-4-mobile.jpg"></div>
+      <div class="gallery__img">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+          <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола" width="280" height="280">
+        </picture>
+      </div>
       <div class="gallery__wrapper">
         <div class="gallery__info">
           <h3 class="gallery__title">Мост дьявола</h3>
           <span class="gallery__author">Автор фото: Антон</span>
         </div>
-        <span class="gallery__likes">254</span>
+        <div class="gallery__likes">
+          <svg class="gallery__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+            <g id="Page-1">
+              <g id="Core" transform="translate(-295.000000, -464.000000)">
+                <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                  <path id="Shape" fill="#a9a9a9" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029
+                  l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1
+                  C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z
+                  M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          254
+        </div>
       </div>
     </article>
   </section>
@@ -79,15 +168,20 @@
       <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     </div>
     <div class="video__player">
-      <video poster="img/video-mobile.jpg">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+        <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео" class="video__poster" width="320" height="201">
+      </picture>
+      <video poster="">
         <source src="#">
       </video>
       <div class="video__controls">
         <div class="video__range"></div>
-        <div class="video__replay"></div>
-        <div class="video-btn">
+        <div class="video__btn">
+          <span class="video__replay"></span>
           <span class="video__subs"></span>
-          <span class="video__wide"></span>
+          <span class="video__fullscreen"></span>
         </div>
       </div>
     </div>
