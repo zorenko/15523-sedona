@@ -6,7 +6,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  padding-bottom: 37px;
+  padding-bottom: 36px;
 }
 .form__fieldset,
 .form__fieldset--contacts>div {
@@ -23,12 +23,12 @@
   justify-content: space-between;
   align-items: baseline;
 }
+.form__fieldset {
+  padding: 20px;
+}
 .form__title {
   margin-bottom: 19px;
   text-align: center;
-}
-.form__fieldset--feedback .form__title {
-  margin-bottom: 15px;
 }
 input {
   flex: 1 150px;
@@ -74,6 +74,12 @@ input,
   background: #fff;
   box-shadow: inset 0px 0px 0px 4px @btn-disabled;
 }
+.form__fieldset--name {
+  padding: 19px 20px 20px;
+}
+.form__fieldset--name .form__title {
+  padding-left: 8px;
+}
 .form__fieldset--name label {
   margin-right: 20px;
 }
@@ -86,14 +92,15 @@ input,
   margin-bottom: 4px;
 }
 .form__fieldset--contacts .form__title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  padding-left: 19px;
 }
 .form__fieldset--contacts label {
   margin-bottom: 10px;
   margin-left: 21px;
 }
 .form__fieldset--contacts label:nth-of-type(2) {
-  margin-top: 17px;
+  margin-top: 16px;
 }
 .form__fieldset--contacts input {
   width: 100%;
@@ -142,8 +149,6 @@ input,
   font-weight: normal;
   margin-left: 21px;
 }
-
-
 .form__fieldset input[type=checkbox],
 .form__fieldset input[type=radio] {
   display: none;
@@ -156,10 +161,10 @@ input,
 .form__fieldset--impression label {
   padding-top: 19px;
   padding-left: 78px;
-  padding-bottom: 28px;
+  padding-bottom: 29px;
 }
 .form__fieldset--impression label:last-child {
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 }
 .form__fieldset--attractions {
   padding-bottom: 15px;
@@ -169,12 +174,12 @@ input,
   flex-direction: column;
 }
 .form__fieldset--attractions li {
-  padding-top: 14px;
+  padding-top: 13px;
   padding-bottom: 45px;
-  padding-left: 75px;
+  padding-left: 79px;
 }
 .form__fieldset--attractions li:last-child {
-  padding-bottom: 23px;
+  padding-bottom: 27px;
 }
 
 .form__fieldset input[type=radio]+label::before,
@@ -191,7 +196,7 @@ input,
 }
 .form__checkbox {
   top: -17px;
-  left: -78px;
+  left: -80px;
   border-radius: 5px;
 }
 .form__fieldset input[type=radio]+label:hover::before,
@@ -221,15 +226,17 @@ input,
 .form__fieldset input[type=checkbox]:checked+label .form__tick {
   position: absolute;
   top: 20px;
-  left: 16px;
+  left: 17px;
 }
 .form__fieldset input[type=checkbox]:checked+label:active .form__tick {
   fill: #a4a4a4;
 }
-
+.form__fieldset--feedback .form__title {
+  margin-bottom: 15px;
+}
 textarea {
   border: none;
-  padding: 18px 20px;
+  padding: 17px 20px;
   background: #f2f2f2;
   height: 160px;
   color: #000;
@@ -242,14 +249,13 @@ textarea[placeholder] {
   line-height: 26px;
 }
 .form__btn {
-  margin: 32px 20px 0;
-  padding: 18px 45px;
+  margin: 31px 20px 0;
+  padding: 19px 45px 18px;
 }
 
 
 @media @mobile-width {
   .form__fieldset {
-    padding: 20px;
     border-top: 1px solid #e5e5e5;
   }
   .form__required {
@@ -257,11 +263,10 @@ textarea[placeholder] {
   }
 }
 
-
 @media @tablet-width {
   .form form {
     flex-direction: row;
-    padding: 5px 60px 59px;
+    padding: 7px 60px 59px;
   }
   input,
   label {
@@ -272,6 +277,7 @@ textarea[placeholder] {
     flex-basis: 100%;
     text-align: left;
     margin-bottom: 63px;
+    padding: 0;
   }
   .form__title {
     margin-bottom: 57px;
@@ -294,6 +300,7 @@ textarea[placeholder] {
   }
   .form__fieldset--name .form__title {
     flex-basis: 100%;
+    padding: 0;
   }
   .form__fieldset--name input {
     width: 170px;
@@ -311,21 +318,25 @@ textarea[placeholder] {
     padding-bottom: 25px;
   }
   .form__fieldset--contacts {
-    margin-bottom: 44px;
+    margin-bottom: 46px;
   }
   .form__fieldset--contacts .form__title {
     margin-bottom: 26px;
     order: -3;
+    padding: 0;
   }
   .form__fieldset--contacts label:first-of-type {
     order: -2;
     margin-bottom: 9px;
   }
+  .form__fieldset--contacts label:nth-of-type(2) {
+    margin-top: 19px;
+  }
   .form__error {
     order: -1;
   }
   .form__fieldset--attractions {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
   .form__fieldset--attractions .form__title {
     padding: 0 120px;
@@ -335,10 +346,10 @@ textarea[placeholder] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 96px;
+    padding: 0 85px 0 96px;
   }
   .form__fieldset--attractions li {
-    flex-basis: 43%;
+    flex-basis: 44%;
     padding-top: 5px;
     padding-bottom: 60px;
   }
@@ -358,7 +369,7 @@ textarea[placeholder] {
     order: -1;
   }
   .form__fieldset--feedback .form__title {
-    margin-bottom: 58px;
+    margin-bottom: 56px;
   }
   .form__fieldset--feedback {
     margin-bottom: 59px;

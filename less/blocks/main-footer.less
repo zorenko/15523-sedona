@@ -16,7 +16,7 @@
 
 .main-footer__social {
   margin-top: 35px;
-  margin-bottom: 48px;
+  margin-bottom: 46px;
   display: flex;
   justify-content: space-between;
 }
@@ -24,7 +24,7 @@
 .main-footer__social-btn {
   position: relative;
   width: 46px;
-  height: 49px;
+  height: 48px;
   background: @blue;
 }
 .main-footer__social-btn:hover {
@@ -48,7 +48,7 @@
 
 .main-footer__madeby a {
   position: relative;
-  padding-right: 40px;
+  padding-right: 44px;
 }
 .main-footer__madeby a:hover .main-footer__madeby-icon {
   fill: @blue;
@@ -58,30 +58,33 @@
 }
 .main-footer__madeby-icon {
   position: absolute;
-  top: -9px;
-  right: -41px;
+  top: -8px;
+  right: 3px;
 }
 
 @media @tablet-width {
   .main-footer {
-    padding: 36px 60px;
+    padding: 36px 79px 36px 60px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   .main-footer__social {
-    flex-basis: 160px;
+    flex-basis: 150px;
     margin: auto;
-    padding-right: 10px;
+    margin-left: 112px;
+  }
+  .main-footer__madeby-icon {
+    top: -9px;
+    right: -41px;
   }
 }
 
 @media @desktop-width {
   .main-footer {
-    padding: 35px 44px 35px 133px;
+    padding: 35px 63px 35px 133px;
   }
   .main-footer__social {
-    flex-basis: 247px;
-    padding-right: 96px;
+    margin-left: 255px;
   }
 }
