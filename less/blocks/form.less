@@ -171,12 +171,10 @@ input,
 .form__fieldset--attractions li {
   padding-top: 14px;
   padding-bottom: 45px;
+  padding-left: 75px;
 }
 .form__fieldset--attractions li:last-child {
   padding-bottom: 23px;
-}
-.form__fieldset--attractions label {
-  padding-left: 78px;
 }
 
 .form__fieldset input[type=radio]+label::before,
@@ -193,7 +191,7 @@ input,
 }
 .form__checkbox {
   top: -17px;
-  left: 0;
+  left: -78px;
   border-radius: 5px;
 }
 .form__fieldset input[type=radio]+label:hover::before,
@@ -302,6 +300,7 @@ textarea[placeholder] {
   }
   .form__fieldset--impression {
     order: -1;
+    padding-right: 30px;
   }
   .form__fieldset--impression label {
     padding-top: 19px;
@@ -434,6 +433,7 @@ textarea[placeholder] {
   .form__title span {
     display: inline;
   }
+
   .form__fieldset--contacts {
     margin-bottom: 44px;
   }
@@ -444,8 +444,12 @@ textarea[placeholder] {
     margin-left: 0;
     flex-grow: 1;
   }
+  .form__fieldset--contacts label:first-of-type {
+    max-width: 100px;
+  }
   .form__fieldset--contacts label:nth-of-type(2) {
     margin-left: 80px;
+    max-width: 150px;
   }
   .form__fieldset--contacts label[for=tel] span {
     display: none;
