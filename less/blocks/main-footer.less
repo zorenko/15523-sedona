@@ -27,42 +27,39 @@
   height: 49px;
   background: @blue;
 }
-.main-footer__social-btn::after {
+.main-footer__social-btn:hover {
+  background: @blue-hvr;
+}
+.main-footer__social-btn:active {
+  background: @blue-down;
+}
+.main-footer__social-btn:active .main-footer__social-icon {
+  fill: @btn-text-down;
+}
+.main-footer__social-icon {
   position: absolute;
-  content: "";
-  width: 17px;
-  height: 14px;
   top: 17px;
   left: 14px;
-  background: url("../img/icon-twitter.svg");
 }
-.main-footer__social-btn--fb::after {
-  width: 9px;
-  height: 18px;
-  top: 13px;
+.main-footer__social-icon--fb {
+  top: 14px;
   left: 19px;
-  background: url("../img/icon-facebook.svg");
 }
-.main-footer__social-btn--yt::after {
-  width: 19px;
-  height: 14px;
-  top: 17px;
-  left: 14px;
-  background: url("../img/icon-youtube.svg");
-}
+
 .main-footer__madeby a {
   position: relative;
   padding-right: 40px;
 }
-.main-footer__madeby a::after {
+.main-footer__madeby a:hover .main-footer__madeby-icon {
+  fill: @blue;
+}
+.main-footer__madeby a:active .main-footer__madeby-icon {
+  fill: @menu-down;
+}
+.main-footer__madeby-icon {
   position: absolute;
-  content: "";
-  width: 27px;
-  height: 34px;
-  top: -10px;
-  right: 0;
-  background: url("../img/logo-htmlacademy.svg");
-  background-size: 27px 34px;
+  top: -9px;
+  right: -41px;
 }
 
 @media @tablet-width {

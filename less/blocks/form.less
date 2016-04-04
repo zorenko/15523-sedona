@@ -59,11 +59,20 @@ input,
 }
 .form__fieldset--name input[placeholder],
 .form__fieldset--contacts input[placeholder] {
-  background: #f2f2f2;
+  background: @bg-color;
   color: #000;
   font-weight: 600;
   line-height: 20px;
   vertical-align: middle;
+}
+.form__fieldset--name input[placeholder]:hover,
+.form__fieldset--contacts input[placeholder]:hover {
+  background: @btn-disabled;
+}
+.form__fieldset--name input[placeholder]:active,
+.form__fieldset--contacts input[placeholder]:active {
+  background: #fff;
+  box-shadow: inset 0px 0px 0px 4px @btn-disabled;
 }
 .form__fieldset--name label {
   margin-right: 20px;
@@ -103,7 +112,7 @@ input,
   position: absolute;
   content: "";
   width: 57px;
-  height: 57px;
+  height: 100%;
   top: 0;
   right: 0;
   background: #e6e6e6;
@@ -169,8 +178,10 @@ input,
 .form__fieldset--attractions label {
   padding-left: 78px;
 }
-.form__fieldset input[type=checkbox]+label::before,
-.form__fieldset input[type=radio]+label::before {
+
+.form__fieldset input[type=radio]+label::before,
+.form__checkbox, {
+  display: inline-block;
   position: absolute;
   content: "";
   width: 56px;
@@ -180,13 +191,20 @@ input,
   border-radius: 30px;
   background: @bg-color;
 }
-.form__fieldset input[type=checkbox]+label::before {
+.form__checkbox {
   top: -17px;
   left: 0;
   border-radius: 5px;
 }
-.form__fieldset input[type=radio]:checked+label::after,
-.form__fieldset input[type=checkbox]:checked+label::after {
+.form__fieldset input[type=radio]+label:hover::before,
+.form__fieldset input[type=checkbox]+label:hover>.form__checkbox {
+  background: @btn-disabled;
+}
+.form__fieldset input[type=radio]+label:active::before,
+.form__fieldset input[type=checkbox]+label:active>.form__checkbox {
+  background: #d5d5d5;
+}
+.form__fieldset input[type=radio]:checked+label::after {
   position: absolute;
   content: "";
   width: 20px;
@@ -196,15 +214,20 @@ input,
   border-radius: 21px;
   background: @text-gray;
 }
-.form__fieldset input[type=checkbox]:checked+label::after {
-  width: 24px;
-  height: 17px;
-  top: 2px;
-  left: 16px;
-  background: url("../img/icon-tick.svg");
-  background-size: 24px 17px;
+.form__fieldset input[type=radio]:checked+label:active::after {
+  background: #a4a4a4;
 }
-
+.form__fieldset input[type=checkbox]:not(:checked)+label .form__tick {
+  display: none;
+}
+.form__fieldset input[type=checkbox]:checked+label .form__tick {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+.form__fieldset input[type=checkbox]:checked+label:active .form__tick {
+  fill: #a4a4a4;
+}
 
 textarea {
   border: none;
