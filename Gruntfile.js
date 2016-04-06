@@ -1,11 +1,9 @@
 "use strict";
 
 module.exports = function(grunt) {
-
   require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
-
     clean: {
       build: ["build"]
     },
@@ -14,16 +12,8 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          src: [
-            "fonts/*.{woff,woff2}",
-            "img/*.{png,jpg}"
-          ],
+          src: ["fonts/*.{woff,woff2}", "img/*.{png,jpg,svg}"],
           dest: "build"
-        }, {
-          expand: true,
-          flatten: true,
-          src: ["img/icons/*.svg"],
-          dest: "build/img"
         }]
       },
       html: {
@@ -55,8 +45,7 @@ module.exports = function(grunt) {
 
     imagemin: {
       images: {
-        options: { optimizationLevel: 3
-        },
+        options: { optimizationLevel: 3 },
         files: [{
           expand: true,
           src: ["build/img/*.{png,jpg,svg}"]
@@ -96,9 +85,7 @@ module.exports = function(grunt) {
     browserSync: {
       server: {
         bsFiles: {
-          src: ["build/*.html",
-                "build/css/*.css",
-                "build/js/*.js"]
+          src: ["build/*.html", "build/css/*.css", "build/js/*.js"]
         },
         options: {
           server: "./build",
@@ -109,8 +96,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-
 
     watch: {
       html: {
@@ -131,18 +116,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("serve", [
-    "browserSync",
-    "watch"
-  ]);
-
-  grunt.registerTask("build", [
-    "clean",
-    "copy",
-    "less",
-    "postcss",
-    "csso",
-    "imagemin"
-  ]);
-
+  grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "csso","imagemin"]);
 };
