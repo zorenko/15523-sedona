@@ -2,9 +2,21 @@
   .container;
   .clearfix;
   height: 350px;
-  background: #cadfaa url('../img/bg-map-mobile.jpg');
+  background: url("../img/bg-map-mobile.jpg");
+  background-color: #cadfaa;
+  background-size: 320px 350px;
 }
 
 @media @tablet-width {
+  .map {
+    background: url("../img/bg-map-tablet.jpg");
+    background-size: 768px 350px;
+  }
+}
 
+@media @desktop-width {
+  .map {
+    background: url("../img/bg-map-desktop.jpg");
+    background-size: 1200px 350px;
+  }
 }

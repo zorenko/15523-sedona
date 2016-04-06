@@ -6,12 +6,14 @@
   flex-direction: column;
 }
 .gallery__photo {
-  padding: 22px 20px 19px;
+  padding: 22px 20px 18px;
   display: flex;
   flex-direction: column;
 }
 .gallery__img {
-  margin-bottom: 13px;
+  height: 280px;
+  width: 280px;
+  margin-bottom: 19px;
 }
 .gallery-wrapper {
   display: flex;
@@ -19,11 +21,11 @@
   align-items: flex-start;
 }
 .gallery__info {
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 .gallery__title {
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .gallery__author {
   text-transform: none;
@@ -33,14 +35,13 @@
   padding-left: 37px;
   font-weight: 600;
 }
-.gallery__likes::after {
+.gallery__icon {
   position: absolute;
-  content: "";
-  top: -2px;
-  left: 0;
-  width: 21px;
+  top: -5px;
+  left: 1px;
+  width: 22px;
   height: 20px;
-  background: url('../img/icon-like.svg');
+  fill: #a9a9a9;
 }
 
 
@@ -66,31 +67,50 @@
     display: flex;
     flex-direction: column;
   }
+  .gallery__photo:nth-child(3) {
+    background: #eaeaea;
+  }
   .gallery__photo--big {
     flex-basis: 100%;
   }
   .gallery__img {
     margin: 0;
   }
+  .gallery__img,
   .gallery__img img {
     width: 324px;
     height: 267px;
   }
-
+  .gallery__photo--big .gallery__img,
   .gallery__photo--big .gallery__img img {
     width: 648px;
     height: 400px;
   }
   .gallery__wrapper {
-    padding: 15px 24px;
+    padding: 18px 29px 9px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .gallery__photo--big .gallery__wrapper {
+    padding: 19px 21px 8px 20px;
+  }
+  .gallery__likes {
+    padding-left: 31px;
+    padding-bottom: 11px;
+  }
+  .gallery__icon {
+    top: -1px;
+    left: -1px;
+  }
+  .gallery__photo--big .gallery__icon {
+    left: 0px;
   }
 }
 @media @desktop-width {
   .gallery {
     padding: 0;
+    padding-top: 14px;
   }
   .gallery__photo {
     flex-basis: 33%;
@@ -100,17 +120,14 @@
   .gallery__img {
     z-index: 0;
   }
+  .gallery__img,
   .gallery__img img {
     width: 100%;
-  }
-  .gallery__wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
   .gallery__photo--big {
     flex-basis: 100%;
   }
+  .gallery__photo--big .gallery__img,
   .gallery__photo--big .gallery__img img {
     width: 100%;
   }
@@ -121,5 +138,10 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
+    overflow: hidden;
+    max-height: 80px;
+  }
+  .gallery__icon {
+    fill: #fff;
   }
 }
