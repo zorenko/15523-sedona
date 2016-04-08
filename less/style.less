@@ -77,7 +77,14 @@ body {
   color: #333333;
   background-color: @bg-color;
 }
-
+@media @desktop-width {
+  main {
+    .container;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+  }
+}
 a, button:focus, input:focus, textarea:focus, h2, h3 {
   outline: none;
 }
@@ -101,7 +108,7 @@ h1, h2 {
   }
 }
 p {
-  line-height: 26px;
+  line-height: 24px;
 }
 button {
   border: none;

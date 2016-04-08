@@ -68,7 +68,10 @@
 .subheader__text {
   text-align: center;
   position: relative;
-  padding: 42px 25px 26px;
+  padding: 40px 25px 26px;
+}
+.subheader__text p {
+  line-height: 26px;
 }
 .subheader__text--small {
   padding: 40px 25px 16px; //suits to form page
@@ -83,22 +86,22 @@
 .subheader__title {
   margin-bottom: 26px; //suits to form page
 }
-@media @mobile-width {
-  .subheader__text::after {
-    position: absolute;
-    content: "";
-    bottom: -37px;
-    left: 0;
-    width: 320px;
-    height: 37px;
-    background: url("../img/bg-triangle.svg");
-    background-size: 320px 37px;
-    z-index: 100;
-  }
-  .subheader__text--small::after {
-    display: none;
-  }
-}
+// @media @mobile-width {
+//   .subheader__text::after {
+//     position: absolute;
+//     content: "";
+//     bottom: -37px;
+//     left: 0;
+//     width: 320px;
+//     height: 37px;
+//     background: url("../img/bg-triangle.svg");
+//     background-size: 320px 37px;
+//     z-index: 100;
+//   }
+//   .subheader__text--small::after {
+//     display: none;
+//   }
+// }
 
 @media @tablet-width {
   .subheader__cover {
@@ -143,11 +146,11 @@
     padding: 50px 80px;
   }
   .subheader__text--small {
-    padding: 76px 160px 68px;
+    padding: 74px 165px 69px;
   }
   .subheader__title--small {
     font-size: 30px;
-    margin-bottom: 29px;
+    margin-bottom: 31px;
   }
 }
 

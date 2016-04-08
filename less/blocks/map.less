@@ -1,10 +1,23 @@
 .map {
   .container;
   .clearfix;
+  position: relative;
   height: 350px;
   background: url("../img/bg-map-mobile.jpg");
   background-color: #cadfaa;
   background-size: 320px 350px;
+}
+
+.map::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 27px;
+  height: 27px;
+  margin-top: -15px;
+  margin-left: -14px;
+  background: url("../img/icon-map-marker.svg");
 }
 
 @media @tablet-width {
