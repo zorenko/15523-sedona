@@ -87,13 +87,16 @@
   .subheader__text::after {
     position: absolute;
     content: "";
-    bottom: 0;
+    bottom: -37px;
     left: 0;
     width: 320px;
     height: 37px;
     background: url("../img/bg-triangle.svg");
     background-size: 320px 37px;
     z-index: 100;
+  }
+  .subheader__text--small::after {
+    display: none;
   }
 }
 
