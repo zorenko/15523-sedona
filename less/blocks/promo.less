@@ -17,10 +17,15 @@
   color: #fff;
 }
 .promo--obverse .promo__item {
-  padding: 57px 20px 36px;
-  flex-basis: 208px;
+  padding-top: 57px;
+  flex-basis: 470px;
 }
-.promo--obverse .promo__photo {
+.promo--obverse .promo__item p {
+  padding: 0 20px 28px;
+}
+.promo__item--bg-image::after {
+  display: block;
+  content: "";
   height: 260px;
   width: 100%;
   background-image: url("../img/photo-city.jpg");
@@ -30,17 +35,17 @@
 @media
   (min-resolution: 144dpi),
   (min-resolution: 1.5dppx) {
-   .promo--obverse .promo__photo {
+   .promo__item--bg-image::after {
     background-image: url("../img/photo-city@2x.jpg");
   }
 }
-.promo--obverse:nth-of-type(4) .promo__photo {
+.promo--obverse:nth-of-type(4) .promo__item--bg-image::after {
   background-image: url("../img/photo-bridge.jpg");
 }
 @media
   (min-resolution: 144dpi),
   (min-resolution: 1.5dppx) {
-   .promo--obverse:nth-of-type(4) .promo__photo {
+   .promo--obverse:nth-of-type(4) .promo__item--bg-image::after {
     background-image: url("../img/photo-bridge@2x.jpg");
   }
 }
@@ -97,9 +102,10 @@
     background-repeat: no-repeat;
   }
   .promo--obverse:nth-of-type(4) .promo__item {
-    padding: 42px 20px 36px;
-    flex-basis: 191px;
+    padding-top: 38px;
+    flex-basis: 450px;
   }
+
   .promo--reverse {
     padding: 0 20px;
   }
@@ -121,11 +127,11 @@
     flex-grow: 1;
   }
   .promo--obverse .promo__item {
-    padding: 45px 40px;
+    // padding: 45px 40px;
   }
-  .promo--obverse .promo__photo {
+  .promo__item--bg-image::after {
     height: 256px;
-    flex-basis: 66%;
+    width: 66%;
   }
   .promo--obverse:nth-of-type(4) .promo__item {
     order: 1;
@@ -198,10 +204,10 @@
   .promo--obverse .promo__title {
     padding: 0 50px;
   }
-  .promo--obverse .promo__photo {
+  .promo__item--bg-image::after {
     background-size: 100% auto;
     height: 255px;
-    flex-basis: 67%;
+    width: 67%;
   }
   .promo--additional .promo__item {
     padding: 161px 70px 78px;
